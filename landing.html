@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en" class="h-100">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A bike trail locator">
+    <meta name="author" content="Romal Patel, Gifty Gyimah, [Rouger?,] Summer Villeneuve">
+    <title>Bike Trail Locator</title>
+
+    <!-- Bootstrap core CSS -->
+		<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="./assets/css/style.css" rel="stylesheet">
+
+  </head>
+  <body class="d-flex h-100 text-center text-white bg-dark bg-image">
+    
+		<div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
+			<header class="mb-auto bg-dark p-3">
+				<div>
+					<h3 class="float-md-start mb-0">Trailr</h3>
+				</div>
+			</header>
+
+			<main class="px-3 d-flex justify-content-center">
+				<div class="card bg-dark bg-opacity-75 w-75">
+					<h1 class="card-title">Bike Trail Locator</h1>
+					<div class="card-body">
+						<form class="p-4 p-md-5">
+							<div class="d-inline-block">
+								<input type="search" class="form-control form-control-lg" id="city-search" placeholder="Toronto">
+								<label for="city-search" class="visually-hidden">Enter city name</label>
+							</div>
+							<div class="d-inline-block">
+								<select class="form-select form-select-lg" id="province-select">
+									<option selected>Select Province</option>
+									<option value="AB">Alberta</option>
+									<option value="BC">British Columbia</option>
+									<option value="MB">Manitoba</option>
+									<option value="NB">New Brunswick</option>
+									<option value="NL">Newfoundland and Labrador</option>
+									<option value="NT">Northwest Territories</option>
+									<option value="NS">Nova Scotia</option>
+									<option value="NU">Nunavut</option>
+									<option value="ON">Ontario</option>
+									<option value="PE">Prince Edward Island</option>
+									<option value="QC">Quebec</option>
+									<option value="SK">Saskatchewan</option>
+									<option value="YT">Yukon</option>
+								</select>
+								<label for="province-select" class="visually-hidden">Select province</label>
+							</div>
+							<div class="d-inline-block">
+								<button class="btn btn-lg btn-primary" type="submit">Search</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</main>
+
+			<footer class="mt-auto text-white-50 bg-dark bg-opacity-75">
+				<h2>There are <span id="trail-km-total">[X]</span>kms of bike trail in Canada right now.</h2>
+				<p>What're you waiting for?</p>
+			</footer>
+		</div>
+
+  </body>
+</html>
