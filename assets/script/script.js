@@ -1,6 +1,12 @@
 //working geo code api to change the locattion from name to geo location i.e. latitude and longitude.
-function geocodeApiFunc() {
-    var geocodeUrl = "https://geocode.search.hereapi.com/v1/geocode?q=waterloo,ON&apiKey=h2Z7HjpBCGTzBXdH5jrId3cTFryvob9gDpL1Y5faxaI";
+
+var fetchbutton = document.getElementById('searchBtn');
+
+function geocodeApiFunc(event) {
+    event.preventDefault()
+    var inputCity = document.getElementById("city-search").value;
+    var province = document.getElementById("province-select").value;
+    var geocodeUrl = "https://geocode.search.hereapi.com/v1/geocode?q=" + inputCity + "," + province + "&apiKey=h2Z7HjpBCGTzBXdH5jrId3cTFryvob9gDpL1Y5faxaI";
     fetch(geocodeUrl)
         .then(function (response) {
             return response.json();
@@ -84,7 +90,7 @@ function geocodeApiFunc() {
 
 }
 
-geocodeApiFunc();
+//geocodeApiFunc();
 
 
 //working weather api that accepts latitude and longitude as the parameters to show the current weather and the forecast weather for upto hourly 7 days.
@@ -98,3 +104,5 @@ function weatherApiFunc(latitude, longitude) {
             console.log(data)
         });
 }
+
+fetchbutton.addEventListener('click', geocodeApiFunc);
