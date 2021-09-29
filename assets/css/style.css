@@ -8,3 +8,54 @@ body {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
+
+.radio {
+	background: #454857;
+	padding: 4px;
+	border-radius: 3px;
+	position: relative;
+}
+
+.radio input {
+	width: auto;
+	height: 100%;
+	appearance: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 2px;
+	padding: 4px 8px;
+	background: #454857;
+	color: #bdbdbdbd;
+	font-size: 14px;
+	font-family: sans-serif;
+	transition: all 100ms linear;
+}
+
+.radio input:checked {
+	color: #fff;
+	box-shadow: 0 1px 1px #0000002e;
+	text-shadow: 0 1px 0px #79485f7a;
+}
+
+.radio input#difficulty-all:checked {
+	background-image: linear-gradient(180deg, #6dc1f1, #456eb9);
+}
+
+.radio input#difficulty-beg:checked {
+	background-image: linear-gradient(180deg, #95d891, #74bbad);
+}
+
+.radio input#difficulty-inter:checked {
+	background-image: linear-gradient(180deg, #e9b961, #b6823f);
+}
+
+.radio input#difficulty-adv:checked {
+	background-image: linear-gradient(180deg, #e96161, #b93131);
+}
+
+.radio input:before {
+	content: attr(label);
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+}
