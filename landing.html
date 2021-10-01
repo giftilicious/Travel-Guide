@@ -10,6 +10,8 @@
 
 	<!-- Bootstrap core CSS -->
 	<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 	<!-- Custom styles for this template -->
 	<link href="./assets/css/style.css" rel="stylesheet">
@@ -20,12 +22,12 @@
 
 	<div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
 		<header class="mb-auto bg-dark p-3">
-			<div>
-				<h3 class="float-md-start mb-0">Trailr</h3>
+			<div id="headerDiv" class="mb-auto bg-dark p-3 flex align-items-center">
+				<h1 class="float-md-start mb-0">Trailr</h1>
 			</div>
 		</header>
-		<main class="px-3 d-flex justify-content-center">
-			<div class="card bg-dark bg-opacity-75 w-75">
+		<main class="px-3 d-flex justify-content-center ">
+			<div id="searchDiv" class="card bg-dark bg-opacity-75 w-75">
 				<h1 class="card-title">Bike Trail Locator</h1>
 				<div class="card-body">
 					<form class="p-4 p-md-5">
@@ -57,7 +59,6 @@
 							<button class="btn btn-lg btn-primary" id="searchBtn" type="submit">Search</button>
 						</div>
 					</form>
-
 				</div>
 			</div>
 		</main>
@@ -66,7 +67,9 @@
 			<p>What're you waiting for?</p>
 		</footer>
 	</div>
+	<!-- <div id="divContainer"></div> -->
 	<script src="assets/script/script.js"></script>
+
 </body>
 
 </html>
