@@ -39,3 +39,21 @@ h1 {
     font-size: 36px ;
 }
 
+a:link {
+    color: #0f65b1;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color: #7d7d7d;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #5da5e4;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  
