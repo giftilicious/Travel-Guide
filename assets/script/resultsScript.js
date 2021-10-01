@@ -89,13 +89,13 @@ function weatherApiFunc() {
             } else if (data.current_weather.weathercode === 1 || data.current_weather.weathercode === 2) {
                 dynaWeather.append(wPartlycloudy);
             } else if (data.current_weather.weathercode === 3) {
-                weatherIcon.append(wOvercast)
+                dynaWeather.append(wOvercast)
             } else if (data.current_weather.weathercode === 45 || data.current_weather.weathercode === 45) {
-                weatherIcon.append(wFoggy)
+                dynaWeather.append(wFoggy)
             } else if (data.current_weather.weathercode === 51 || data.current_weather.weathercode === 53 || data.current_weather.weathercode === 55) {
-                weatherIcon.append(wDrizzle)
+                dynaWeather.append(wDrizzle)
             } else if (data.current_weather.weathercode === 61 || data.current_weather.weathercode === 63 || data.current_weather.weathercode === 65 || data.current_weather.weathercode === 80 || data.current_weather.weathercode === 81 || data.current_weather.weathercode === 82) {
-                weatherIcon.append(wHeavyrain)
+                dynaWeather.append(wHeavyrain)
             }
 
             var headerTemp = document.createElement('li');
