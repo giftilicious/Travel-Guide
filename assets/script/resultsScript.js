@@ -72,14 +72,19 @@ function weatherApiFunc() {
 
             var wclearsky = document.createElement('img');
             wclearsky.setAttribute('src', "assets/images/clearsky.png");
+            wclearsky.setAttribute('style', "max-width:6% ");
             var wDrizzle = document.createElement('img');
             wDrizzle.setAttribute('src', "assets/images/drizzle.png");
+            wDrizzle.setAttribute('style', "max-width:6% ");
             var wFoggy = document.createElement('img');
             wFoggy.setAttribute('src', "assets/images/foggy.png");
+            wFoggy.setAttribute('style', "max-width:6% ");
             var wHeavyrain = document.createElement('img');
             wHeavyrain.setAttribute('src', "assets/images/heavyrain.png");
+            wHeavyrain.setAttribute('style', "max-width:6% ");
             var wOvercast = document.createElement('img');
             wOvercast.setAttribute('src', "assets/images/overcast.png");
+            wOvercast.setAttribute('style', "max-width:6% ");
             var wPartlycloudy = document.createElement('img');
             wPartlycloudy.setAttribute('src', "assets/images/partlycloudy.png");
             wPartlycloudy.setAttribute('style', "max-width:6% ");
