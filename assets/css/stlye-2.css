@@ -11,14 +11,17 @@ body{
 
 header {
     padding: 14px;
-    background-color: #262628;    
+    background-color: #ffff; 
+    font-size: 28px;
+    font-weight: 600; 
+    color: #262628;  
 }
 
-.logo {
+/* .logo {
     font-size: 28px;
     font-weight: 600;
-    color: #ffffff;
-}
+    color: #262628;
+} */
 
 main {
     width: 50%;
