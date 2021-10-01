@@ -31,21 +31,26 @@ function trailApi() {
 
                 document.getElementById('divContainer').insertAdjacentHTML("beforeend",
                     `<div class="bg-white rounded-lg border border-gray-200 shadow-md">
-                            <!-- image -->
-                            <div class="flex">
-                                <img src="${diffi.thumbnail}" class="rounded-l-lg h-80 w-1/3 object-cover" />
-                                <!-- title & body-->
-                                <div class="p-8">
-                                    <h2 class="text-xl font-extrabold mb-5">${diffi.name}</h2>
-                                    <p>Descrition:  ${diffi.description}</p>
-                                    <p>City:  ${diffi.city}</p>
-                                    <p>Difficulty of the Trail:  ${diffi.difficulty}</p>
-                                    <p>Length of the Trail:  ${diffi.length}</p>
-                                    <p>Rating of the Trail:  ${diffi.rating}</p>
-                                    <a href="${diffi.url}">Visit Trail!</a>
-                                </div>
-                            </div>
-                        </div>`)
+                    <!-- image -->
+                    <div class="flex">
+                        <img src="${diffi.thumbnail}" class="rounded-l-lg w-1/3 object-cover" />
+                        <!-- title & body-->
+                        <div class="p-8">
+                            <h2 class="text-xl font-extrabold mb-5">${diffi.name}</h2>
+                            <p><span class="font-semibold">City: </span>${diffi.city}</p>
+                            <br>
+                            <p><span class="font-semibold">Description: </span>${diffi.description}</p>
+                            <br>
+                            <p><span class="font-semibold">Level: </span>${diffi.difficulty}</p>
+                            <br>
+                            <p><span class="font-semibold">Length: </span>${diffi.length} miles</p>
+                            <br>
+                            <p><span class="font-semibold">Rating: </span>${diffi.rating} ⭐</p>
+                            <br>
+                            <a href="${diffi.url}">Learn More</a>           
+                        </div>
+                    </div>
+                </div>`)
             });
         });
 }
