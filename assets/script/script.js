@@ -1,10 +1,13 @@
-//working geo code api to change the locattion from name to geo location i.e. latitude and longitude.
 
 var fetchbutton = document.getElementById('searchBtn');
 var homebutton = document.getElementById('homeBtn');
-// let selectDifficulty
+var recentResults = JSON.parse(localStorage.getItem('results')) || []
+var lastSearch = "Recent Search: " + recentResults.at(-1);
 
-
+console.log(recentResults);
+console.log(lastSearch);
+var recentSearch = document.getElementById('recentSearch');
+recentSearch.append(lastSearch);
 
 function geocodeApiFunc(event) {
     event.preventDefault()
@@ -21,12 +24,12 @@ function geocodeApiFunc(event) {
             var latitude = data.items[0].position.lat;
             var longitude = data.items[0].position.lng
             console.log(latitude, longitude);
+            recentResults.push(inputCity);
+            localStorage.setItem("results", JSON.stringify(recentResults));
             window.location.href = './results.html?lat=' + latitude + '&lon=' + longitude;
 
-            trailApi(latitude, longitude)
-            weatherApiFunc(latitude, longitude);
         });
 }
 
-
 fetchbutton.addEventListener('click', geocodeApiFunc);
+
