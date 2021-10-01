@@ -1,13 +1,3 @@
-let tName
-let tCity
-let tDescription
-let tDifficulty
-let tLength
-let tRating
-let tUrl
-let tThumbnail
-let dynaEl
-
 let queryString = document.location.search;
 
 let latitudeArray1 = queryString.split('=')[1];
@@ -34,22 +24,12 @@ function trailApi() {
         })
         .then(function (data) {
             console.log(data)
-
-            //filters trails by difficulty
-            // var difficultySelector = document.querySelector('input[name="difficulty"]:checked').value;
-            // selectDifficulty = data.data.filter(function (difi) {
-            //     return difi.difficulty == difficultySelector;
-            // });
-            // console.log(selectDifficulty);
-
             data.data.forEach(diffi => {
                 if (diffi.thumbnail == null) {
                     diffi.thumbnail = "https://images.unsplash.com/photo-1600284536251-8bb98db53468?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8dHJhaWx8ZW58MHx8MHx8&ixlib=rb-1.2.1&w=1000&q=80"
                 }
 
-
                 document.getElementById('divContainer').insertAdjacentHTML("beforeend",
-
                     `<div class="bg-white rounded-lg border border-gray-200 shadow-md">
                             <!-- image -->
                             <div class="flex">
@@ -63,56 +43,10 @@ function trailApi() {
                                     <p>Length of the Trail:  ${diffi.length}</p>
                                     <p>Rating of the Trail:  ${diffi.rating}</p>
                                     <a href="${diffi.url}">Visit Trail!</a>
-
                                 </div>
                             </div>
                         </div>`)
-
             });
-
-            //creates div of all the names of the filtred trails
-            // for (var i = 0; i < selectDifficulty.length; i++) {
-
-            //     dynaEl = document.querySelector("#divContainer")
-            //     var dynaCard = document.querySelector("#cardList");
-
-            //     var cardName = document.createElement('li');
-            //     var cardCity = document.createElement('li');
-            //     var cardDescription = document.createElement('li');
-            //     var cardDifficulty = document.createElement('li');
-            //     var cardLength = document.createElement('li');
-            //     var cardRating = document.createElement('li');
-            //     var cardUrl = document.createElement('a');
-            //     cardUrl.setAttribute('href', selectDifficulty[i].url);
-            //     cardUrl.setAttribute('target', "_blank");
-            //     cardUrl.innerText = "Visit Trail";
-            //     var cardThumbnail = document.createElement('img');
-            //     cardThumbnail.setAttribute('src', selectDifficulty[i].thumbnail);
-            //     cardThumbnail.setAttribute('class', 'rounded-t-lg h-80 w-1/3 object-cover');
-            //     if (selectDifficulty[i].thumbnail == null) {
-            //         cardThumbnail = "No image available"
-            //     }
-
-
-
-            //     dynaCard.append(cardName, cardCity, cardDescription, cardDifficulty, cardLength, cardRating, cardUrl, cardThumbnail);
-
-            //     tName = selectDifficulty[i].name;
-            //     tCity = selectDifficulty[i].city;
-            //     tDescription = selectDifficulty[i].description;
-            //     tDifficulty = selectDifficulty[i].difficulty;
-            //     tLength = selectDifficulty[i].length;
-            //     tRating = selectDifficulty[i].rating;
-            //     tUrl = selectDifficulty[i].url;
-            //     tThumbnail = selectDifficulty[i].thumbnail;
-            //     //console.log(cardName.textContent = tName, tCity, tDescription, tDifficulty, tLength, tRating);
-            //     cardName.textContent = "Name of the Trail: " + tName;
-            //     cardCity.textContent = "Trail located in: " + tCity;
-            //     cardDescription.textContent = "Trail info: " + tDescription;
-            //     cardDifficulty.textContent = "Trail difficulty level: " + tDifficulty;
-            //     cardLength.textContent = "Trail length: " + tLength + " Kms";
-            //     cardRating.textContent = "Trail ratings: " + tRating;
-            // }
         });
 }
 function weatherApiFunc() {
@@ -126,7 +60,6 @@ function weatherApiFunc() {
 
             var dynaWeather = document.querySelector('#headerDiv');
             dynaWeather.setAttribute('style', "justify-content: space-between");
-            //dynaWeather.setAttribute('style', "align-items-center");
 
             var trailTemperature = "   Current Temperature: " + data.current_weather.temperature + " °C";
             var trailWeathercode = data.current_weather.weathercode;
@@ -145,7 +78,6 @@ function weatherApiFunc() {
             var wPartlycloudy = document.createElement('img');
             wPartlycloudy.setAttribute('src', "assets/images/partlycloudy.png");
             wPartlycloudy.setAttribute('style', "max-width:6% ");
-
 
             if (data.current_weather.weathercode === 0) {
                 dynaWeather.append(wclearsky);
@@ -169,7 +101,6 @@ function weatherApiFunc() {
             headerWindspeed.style.color = "#ffffff";
 
             dynaWeather.append(headerTemp, headerWindspeed);
-
 
             console.log(trailTemperature, trailWeathercode, trailWindspeed);
         });
