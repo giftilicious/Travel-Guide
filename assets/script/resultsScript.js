@@ -64,7 +64,7 @@ function weatherApiFunc() {
             console.log(data)
 
             var dynaWeather = document.querySelector('#headerDiv');
-            dynaWeather.setAttribute('style', "justify-content: space-between");
+            //dynaWeather.setAttribute('style', "justify-content: space-between");
 
             var trailTemperature = "   Current Temperature: " + data.current_weather.temperature + " °C";
             var trailWeathercode = data.current_weather.weathercode;
@@ -98,12 +98,12 @@ function weatherApiFunc() {
                 weatherIcon.append(wHeavyrain)
             }
 
-            var headerTemp = document.createElement('p');
+            var headerTemp = document.createElement('li');
             headerTemp.textContent = trailTemperature;
-            headerTemp.style.color = "#ffffff";
-            var headerWindspeed = document.createElement('p');
+            headerTemp.style.color = "#0f65b1";
+            var headerWindspeed = document.createElement('li');
             headerWindspeed.textContent = trailWindspeed;
-            headerWindspeed.style.color = "#ffffff";
+            headerWindspeed.style.color = "#0f65b1";
 
             dynaWeather.append(headerTemp, headerWindspeed);
 
