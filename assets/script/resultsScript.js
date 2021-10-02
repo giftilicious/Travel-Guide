@@ -43,7 +43,7 @@ function trailApi() {
                             <br>
                             <p><span class="font-semibold">Level: </span>${diffi.difficulty}</p>
                             <br>
-                            <p><span class="font-semibold">Length: </span>${diffi.length} miles</p>
+                            <p><span class="font-semibold">Length: </span>${diffi.length} kilometers</p>
                             <br>
                             <p><span class="font-semibold">Rating: </span>${diffi.rating} ⭐</p>
                             <br>
