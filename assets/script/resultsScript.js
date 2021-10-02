@@ -31,21 +31,26 @@ function trailApi() {
 
                 document.getElementById('divContainer').insertAdjacentHTML("beforeend",
                     `<div class="bg-white rounded-lg border border-gray-200 shadow-md">
-                            <!-- image -->
-                            <div class="flex">
-                                <img src="${diffi.thumbnail}" class="rounded-l-lg h-80 w-1/3 object-cover" />
-                                <!-- title & body-->
-                                <div class="p-8">
-                                    <h2 class="text-xl font-extrabold mb-5">${diffi.name}</h2>
-                                    <p>Descrition:  ${diffi.description}</p>
-                                    <p>City:  ${diffi.city}</p>
-                                    <p>Difficulty of the Trail:  ${diffi.difficulty}</p>
-                                    <p>Length of the Trail:  ${diffi.length}</p>
-                                    <p>Rating of the Trail:  ${diffi.rating}</p>
-                                    <a href="${diffi.url}">Visit Trail!</a>
-                                </div>
-                            </div>
-                        </div>`)
+                    <!-- image -->
+                    <div class="flex">
+                        <img src="${diffi.thumbnail}" class="rounded-l-lg w-1/3 object-cover" />
+                        <!-- title & body-->
+                        <div class="p-8">
+                            <h2 class="text-xl font-extrabold mb-5">${diffi.name}</h2>
+                            <p><span class="font-semibold">City: </span>${diffi.city}</p>
+                            <br>
+                            <p><span class="font-semibold">Description: </span>${diffi.description}</p>
+                            <br>
+                            <p><span class="font-semibold">Level: </span>${diffi.difficulty}</p>
+                            <br>
+                            <p><span class="font-semibold">Length: </span>${diffi.length} miles</p>
+                            <br>
+                            <p><span class="font-semibold">Rating: </span>${diffi.rating} ⭐</p>
+                            <br>
+                            <a href="${diffi.url}">Learn More</a>           
+                        </div>
+                    </div>
+                </div>`)
             });
         });
 }
@@ -59,7 +64,7 @@ function weatherApiFunc() {
             console.log(data)
 
             var dynaWeather = document.querySelector('#headerDiv');
-            dynaWeather.setAttribute('style', "justify-content: space-between");
+            //dynaWeather.setAttribute('style', "justify-content: space-between");
 
             var trailTemperature = "   Current Temperature: " + data.current_weather.temperature + " °C";
             var trailWeathercode = data.current_weather.weathercode;
@@ -67,14 +72,19 @@ function weatherApiFunc() {
 
             var wclearsky = document.createElement('img');
             wclearsky.setAttribute('src', "assets/images/clearsky.png");
+            wclearsky.setAttribute('style', "max-width:6% ");
             var wDrizzle = document.createElement('img');
             wDrizzle.setAttribute('src', "assets/images/drizzle.png");
+            wDrizzle.setAttribute('style', "max-width:6% ");
             var wFoggy = document.createElement('img');
             wFoggy.setAttribute('src', "assets/images/foggy.png");
+            wFoggy.setAttribute('style', "max-width:6% ");
             var wHeavyrain = document.createElement('img');
             wHeavyrain.setAttribute('src', "assets/images/heavyrain.png");
+            wHeavyrain.setAttribute('style', "max-width:6% ");
             var wOvercast = document.createElement('img');
             wOvercast.setAttribute('src', "assets/images/overcast.png");
+            wOvercast.setAttribute('style', "max-width:6% ");
             var wPartlycloudy = document.createElement('img');
             wPartlycloudy.setAttribute('src', "assets/images/partlycloudy.png");
             wPartlycloudy.setAttribute('style', "max-width:6% ");
@@ -84,21 +94,21 @@ function weatherApiFunc() {
             } else if (data.current_weather.weathercode === 1 || data.current_weather.weathercode === 2) {
                 dynaWeather.append(wPartlycloudy);
             } else if (data.current_weather.weathercode === 3) {
-                weatherIcon.append(wOvercast)
+                dynaWeather.append(wOvercast)
             } else if (data.current_weather.weathercode === 45 || data.current_weather.weathercode === 45) {
-                weatherIcon.append(wFoggy)
+                dynaWeather.append(wFoggy)
             } else if (data.current_weather.weathercode === 51 || data.current_weather.weathercode === 53 || data.current_weather.weathercode === 55) {
-                weatherIcon.append(wDrizzle)
+                dynaWeather.append(wDrizzle)
             } else if (data.current_weather.weathercode === 61 || data.current_weather.weathercode === 63 || data.current_weather.weathercode === 65 || data.current_weather.weathercode === 80 || data.current_weather.weathercode === 81 || data.current_weather.weathercode === 82) {
-                weatherIcon.append(wHeavyrain)
+                dynaWeather.append(wHeavyrain)
             }
 
-            var headerTemp = document.createElement('p');
+            var headerTemp = document.createElement('li');
             headerTemp.textContent = trailTemperature;
-            headerTemp.style.color = "#ffffff";
-            var headerWindspeed = document.createElement('p');
+            headerTemp.style.color = "#0f65b1";
+            var headerWindspeed = document.createElement('li');
             headerWindspeed.textContent = trailWindspeed;
-            headerWindspeed.style.color = "#ffffff";
+            headerWindspeed.style.color = "#0f65b1";
 
             dynaWeather.append(headerTemp, headerWindspeed);
 

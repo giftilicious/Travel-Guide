@@ -1,19 +1,19 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 18px;
-    color: #242424;
-    line-height: 1.3;
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 18px;
+  color: #242424;
+  line-height: 1.3;
 }
 
 main {
-    width: 50%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 section {
@@ -44,4 +44,3 @@ a:link {
     background-color: transparent;
     text-decoration: underline;
   }
-  
