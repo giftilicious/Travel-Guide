@@ -68,26 +68,26 @@ function weatherApiFunc() {
 
             var trailTemperature = "   Current Temperature: " + data.current_weather.temperature + " °C";
             var trailWeathercode = data.current_weather.weathercode;
-            var trailWindspeed = "   Current Windspeed: " + data.current_weather.windspeed + " Kmh";
+            var trailWindspeed = "   Current Windspeed: " + data.current_weather.windspeed + " Km/hr";
 
             var wclearsky = document.createElement('img');
             wclearsky.setAttribute('src', "assets/images/clearsky.png");
-            wclearsky.setAttribute('style', "max-width:6% ");
+            wclearsky.setAttribute('style', "max-width:20% ");
             var wDrizzle = document.createElement('img');
             wDrizzle.setAttribute('src', "assets/images/drizzle.png");
-            wDrizzle.setAttribute('style', "max-width:6% ");
+            wDrizzle.setAttribute('style', "max-width:20% ");
             var wFoggy = document.createElement('img');
             wFoggy.setAttribute('src', "assets/images/foggy.png");
-            wFoggy.setAttribute('style', "max-width:6% ");
+            wFoggy.setAttribute('style', "max-width:20% ");
             var wHeavyrain = document.createElement('img');
             wHeavyrain.setAttribute('src', "assets/images/heavyrain.png");
-            wHeavyrain.setAttribute('style', "max-width:6% ");
+            wHeavyrain.setAttribute('style', "max-width:20% ");
             var wOvercast = document.createElement('img');
             wOvercast.setAttribute('src', "assets/images/overcast.png");
-            wOvercast.setAttribute('style', "max-width:6% ");
+            wOvercast.setAttribute('style', "max-width:20% ");
             var wPartlycloudy = document.createElement('img');
             wPartlycloudy.setAttribute('src', "assets/images/partlycloudy.png");
-            wPartlycloudy.setAttribute('style', "max-width:6% ");
+            wPartlycloudy.setAttribute('style', "max-width:20% ");
 
             if (data.current_weather.weathercode === 0) {
                 dynaWeather.append(wclearsky);
