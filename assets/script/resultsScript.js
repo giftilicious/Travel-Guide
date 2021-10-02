@@ -47,7 +47,7 @@ function trailApi() {
                             <br>
                             <p><span class="font-semibold">Rating: </span>${diffi.rating} ⭐</p>
                             <br>
-                            <a href="${diffi.url}">Learn More</a>           
+                            <a href="${diffi.url}" target="_blank">Learn More</a>           
                         </div>
                     </div>
                 </div>`)
