@@ -68,7 +68,7 @@ function weatherApiFunc() {
 
             var trailTemperature = "   Current Temperature: " + data.current_weather.temperature + " °C";
             var trailWeathercode = data.current_weather.weathercode;
-            var trailWindspeed = "   Current Windspeed: " + data.current_weather.windspeed + " Kmh";
+            var trailWindspeed = "   Current Windspeed: " + data.current_weather.windspeed + " Km/hr";
 
             var wclearsky = document.createElement('img');
             wclearsky.setAttribute('src', "assets/images/clearsky.png");
