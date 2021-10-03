@@ -5,11 +5,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="A bike trail locator">
-	<meta name="author" content="Romal Patel, Gifty Gyimah, [Rouger?,] Summer Villeneuve">
-	<title>Bike Trail Locator</title>
+	<meta name="author" content="Romal Patel, Gifty Gyimah, Summer Villeneuve">
+	<title>Trailr | Bike Trail Locator</title>
 
 	<!-- Bootstrap core CSS -->
 	<link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+
+	<!-- Tailwind CSS -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
 
 	<!-- Custom styles for this template -->
 	<link href="./assets/css/style.css" rel="stylesheet">
@@ -19,23 +25,22 @@
 <body class="d-flex h-100 text-center text-white bg-dark bg-image">
 
 	<div class="cover-container d-flex w-100 h-100 mx-auto flex-column">
-		<header class="mb-auto bg-dark p-3">
-			<div>
-				<h3 class="float-md-start mb-0">Trailr</h3>
-			</div>
+		<header id="headerDiv" class="p-6 bg-gradient-to-r from-black via-gray-700 to-gray-900 ...">
+				<h1><a class="site-title text-4xl text-white tracking-tight font-semibold float-left" href="./index.html">Trailr</a></h1>
 		</header>
-		<main class="px-3 d-flex justify-content-center">
-			<div class="card bg-dark bg-opacity-75 w-75">
-				<h1 class="card-title">Bike Trail Locator</h1>
+
+		<main class="px-3 h-100 d-flex justify-content-center">
+			<div id="searchDiv" class="card bg-dark bg-opacity-75 w-75 m-auto">
+				<h1 class="card-title text-4xl">Bike Trail Locator</h1>
+				<h2 class="text-2xl">There are <span id="trail-km-total">278,576</span>kms of bike trail in Canada right now.</h2>
+				<p>What're you waiting for?</p>
 				<div class="card-body">
 					<form class="p-4 p-md-5">
-						<div class="d-inline-block">
+						<div class="d-flex justify-content-center">
 							<input type="search" class="form-control form-control-lg" id="city-search"
-								placeholder="Toronto">
+								placeholder="City" required>
 							<label for="city-search" class="visually-hidden">Enter city name</label>
-						</div>
-						<div class="d-inline-block">
-							<select class="form-select form-select-lg" id="province-select">
+							<select class="form-select form-select-lg ml-4" id="province-select" required>
 								<option selected>Select Province</option>
 								<option value="AB">Alberta</option>
 								<option value="BC">British Columbia</option>
@@ -52,21 +57,19 @@
 								<option value="YT">Yukon</option>
 							</select>
 							<label for="province-select" class="visually-hidden">Select province</label>
-						</div>
-						<div class="d-inline-block">
-							<button class="btn btn-lg btn-primary" id="searchBtn" type="submit">Search</button>
-						</div>
+						<button class="btn btn-lg btn-primary ml-4" id="searchBtn" type="submit">Search</button>
+					</div>
 					</form>
-
+					<div>
+						<p id="recentSearch"></p>
+					</div>
 				</div>
 			</div>
 		</main>
-		<footer class="mt-auto text-white-50 bg-dark bg-opacity-75">
-			<h2>There are <span id="trail-km-total">[X]</span>kms of bike trail in Canada right now.</h2>
-			<p>What're you waiting for?</p>
-		</footer>
 	</div>
+	<!-- <div id="divContainer"></div> -->
 	<script src="assets/script/script.js"></script>
+
 </body>
 
 </html>
