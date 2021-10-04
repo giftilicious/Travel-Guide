@@ -21,7 +21,7 @@ Bootstrap
 
 HTML
 CSS
-Javascript
+JavaScript
 
 ## Deployed Links
 ```
