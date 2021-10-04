@@ -103,10 +103,10 @@ function weatherApiFunc() {
                 dynaWeather.append(wHeavyrain)
             }
 
-            var headerTemp = document.createElement('li');
+            var headerTemp = document.createElement('div');
             headerTemp.textContent = trailTemperature;
             headerTemp.style.color = "#0f65b1";
-            var headerWindspeed = document.createElement('li');
+            var headerWindspeed = document.createElement('div');
             headerWindspeed.textContent = trailWindspeed;
             headerWindspeed.style.color = "#0f65b1";
 
