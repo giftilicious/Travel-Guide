@@ -32,14 +32,13 @@ JavaScript
 ## User Story
 
 AS A leisure cyclist who enjoys the outdoors,
-I WANT to find new trails in my area along with other destinations throughout Canada 
+I WANT to find new trails in my area along with other destinations throughout Canada
 SO THAT I can develop my cycling skills as well as plan new ways of spending quality time with family and friends.
 
 ## Mockup/Screenshot
-![(./assets/images/trailr-demo-site.png)]
+![trailr-demo-site](https://user-images.githubusercontent.com/90150892/135940329-eb1d1024-4c90-48e0-9ab9-b1f57038e62c.jpg)
 
 
-How to: 
 GIVEN I am planning a bike ride
 WHEN I enter the destination city I want to go to (ex, Toronto, Montreal, Edmonton, etc)
 THEN A list of outdoor trails along with current weather conditions is displayed for me.
